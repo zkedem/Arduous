@@ -52,6 +52,7 @@ void pre_main(void)
 	);
 }*/
 
+// Borrowed from https://github.com/Optiboot/optiboot/blob/master/optiboot/bootloaders/optiboot/optiboot.c
 static void do_spm(uint16_t address, uint8_t command, uint16_t data)
 {
 	// Do spm stuff
