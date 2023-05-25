@@ -1,0 +1,15 @@
+{
+  "name": "avr-fix",
+  "version": "1.0.0",
+  "description": "",
+  "main": "avr-fix.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vscode-oniguruma": "^1.7.0",
+    "vscode-textmate": "^9.0.0"
+  }
+}

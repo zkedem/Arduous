@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>bbae2e90-b744-414b-b044-99e6a48f5f10</ProjectGuid>
+    <avrdevice>ATmega328P</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>Arduous</AssemblyName>
+    <Name>Arduous</Name>
+    <RootNamespace>Arduous</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress />
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue />
+    <BootSegment>2</BootSegment>
+    <ResetRule>0</ResetRule>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <EraseKey />
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.52.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atmega328p -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega328p"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.7.374\include\</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.7.374\include\</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+      </AvrGcc>
+    </ToolchainSettings>
+    <UsesExternalMakeFile>True</UsesExternalMakeFile>
+    <OutputDirectory />
+    <ExternalMakeFilePath>Makefile</ExternalMakeFilePath>
+    <BuildTarget>all</BuildTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atmega328p -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega328p"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.7.374\include\</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize debugging experience (-Og)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.7.374\include\</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+        <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+      </AvrGcc>
+    </ToolchainSettings>
+    <UsesExternalMakeFile>True</UsesExternalMakeFile>
+    <OutputDirectory />
+    <ExternalMakeFilePath>Makefile</ExternalMakeFilePath>
+    <BuildTarget>all</BuildTarget>
+  </PropertyGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+  <ItemGroup>
+    <Compile Include="bios_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="bios_spm.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="bios_spm.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpustack.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="crt\crt1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="crt\service_request\service_request.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="crt\service_request\service_request.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="crt\stdio\stdio.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="crt\stdlib\stdlib.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="diskio.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="elf.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ff15\source\diskio.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ff15\source\diskio.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ff15\source\ff.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ff15\source\ff.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ff15\source\ffconf.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ff15\source\ffsystem.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ff15\source\ffunicode.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="headers\stdio.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="headers\stdlib.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="headers\syscall_info.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="load.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="load.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="old\diskio.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="old\ffconf.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="old\oldelfload.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="old\load.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="old\sdcard.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="old\sdcard.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="old\spi.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="old\spi.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="old\spi_pins.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="services.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="syscall.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="services.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="uart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="uart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Folder Include="crt\stdio" />
+    <Folder Include="crt\stdlib" />
+    <Folder Include="crt\service_request" />
+    <Folder Include="ff15\documents" />
+    <Folder Include="ff15\documents\doc" />
+    <Folder Include="ff15\documents\res" />
+    <Folder Include="ff15\source" />
+    <Folder Include="miniAVRfreeRTOS" />
+    <Compile Include="main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="miniAVRfreeRTOS\list.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="miniAVRfreeRTOS\stream_buffer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="miniAVRfreeRTOS\event_groups.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="miniAVRfreeRTOS\port.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="miniAVRfreeRTOS\tasks.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Folder Include="ff15" />
+    <Folder Include="crt" />
+    <Folder Include="headers" />
+    <Folder Include="old" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="crt\Makefile">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="crt\service_request\Makefile">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="crt\stdio\Makefile">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="crt\stdlib\Makefile">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="ff15\source\00history.txt">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="ff15\source\00readme.txt">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Makefile">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+</Project>

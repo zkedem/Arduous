@@ -1,0 +1,11 @@
+*.o
+*.eps
+*.bak
+*.a
+*.bin
+*.elf
+*.hex
+*.lst
+*.lss
+*.map
+/nbproject
