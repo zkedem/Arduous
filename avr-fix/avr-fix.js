@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+// Adapted from the example in https://github.com/microsoft/vscode-textmate/blob/main/README.md
 const process = require('process');
 const fs = require('fs');
 const path = require('path');
@@ -23,7 +24,6 @@ function readFile(path) {
 const wasmBin = fs.readFileSync(path.join(__dirname, './node_modules/vscode-oniguruma/release/onig.wasm')).buffer;
 let oldSource = [];
 let newSource = [];
-//readFile('C:/Users/CollegeBYOD/Documents/Atmel Studio/7.0/Sample/Sample/main.s').then(data => text = data.toString().split(/[\r\n]+/));
 readFile(process.argv[2]).then(data => {
     oldSource = data.toString().split(/[\r\n]+/);
     newSource = data.toString().split(/[\r\n]+/);
