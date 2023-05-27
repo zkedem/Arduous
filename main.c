@@ -1,7 +1,5 @@
 #include <string.h>
 #include <avr/io.h>
-/*#include <FreeRTOS.h>
-#include <task.h>*/
 #include <avr/eeprom.h>
 #include <avr/pgmspace.h>
 #include "syscall.h"
@@ -22,25 +20,6 @@ extern struct syscall_info_t syscall_info;
 void (*do_spm)(uint16_t, uint8_t, uint16_t);
 uint32_t spm_pagesize;
 uint16_t ram_limit;
-
-/*void exec(char *file, char **argv)
-{
-	// Step 1: Copy process image into memory
-	// Step 2: Create pointer to program start
-	// Step 3: Execute program with arguments using that pointer (the last element in the argument array is a NULL pointer)
-	// Step 4: Once the program returns, if it is no longer needed, clear it from memory
-}
-
-void exec_sync(void *pvParameters)
-{
-	// Step 1: Copy process image into memory
-	// Step 2: Create pointer to program start
-	// Step 3: Execute program with arguments using that pointer (the last element in the argument array is a NULL pointer)
-	// Step 4: Once the program returns, if it is no longer needed, clear it from memory
-
-	//vTaskDelete(NULL);
-}*/
-
 static FATFS filesystem;
 
 void mount(void)
